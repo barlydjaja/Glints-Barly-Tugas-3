@@ -1,14 +1,19 @@
 // 1. Besok Hari Apa?
-let hari =["senin", "selasa", "rabu", "kamis", "jumat", "sabtu", "minggu"]
+function soal1(){
+    let hari =["senin", "selasa", "rabu", "kamis", "jumat", "sabtu", "minggu"]
 
-
-let sekarang = "senin"
-
-for (let i = 0; i < hari.length; i++) {
-    if (i<hari.length-1 && sekarang == hari[i]) {
-        console.log(`${hari[i+1]}`)
-    } else if(sekarang == hari[i]){
-        console.log(hari[0])
+    // var x = document.getElementById("mySelect").value;
+    // document.getElementById("demo").innerHTML = x;
+    
+    let sekarang = document.getElementById("hari").value;
+    for (let i = 0; i < hari.length; i++) {
+        if (i<hari.length-1 && sekarang == hari[i]) {
+            document.getElementById("besokHari").value = hari[i+1]
+            console.log(`${hari[i+1]}`)
+        } else if(sekarang == hari[i]){
+            document.getElementById("besokHari").value = hari [0]
+            console.log(hari[0])
+        }
     }
 }
 
