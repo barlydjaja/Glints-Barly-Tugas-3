@@ -9,8 +9,8 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 
-<body>
-    <div class="container">
+<body class="p-3 mb-2 bg-light text-dark">
+    <div class="container ">
         <h1 style="text-align: center;">Tugas-3 GLINTS</h1>
         <h3 style="text-align: center;">Barly Djaja</h3>
         <div class="text-center">
@@ -18,100 +18,134 @@
                 Instruksi Tugas</a>
         </div>
         <br>
+        <br>
+        <br>
         <!-- soal pertama -->
-        <h2>SOAL 1</h2>
-        <h3>Besok Hari apa?</h3>
-        <h5>pseudo code:</h5>
-        <p>
-            1. masukan list dari hari (senin-minggu) <br>
-            2. buat loop for i=0, sampai i=hari.length, i++ <br>
-            2.1 jika hari senin-sabtu, print hari berikutnya <br>
-            2.2 jika hari minggu, print hari senin <br>
-        </p>
-        <form>
-            <b>pilih hari:</b>
-            <select id="hari">
-                <option value="senin">senin</option>
-                <option value="selasa">selasa</option>
-                <option value="rabu">rabu</option>
-                <option value="kamis">kamis</option>
-                <option value="jumat">jumat</option>
-                <option value="sabtu">sabtu</option>
-                <option value="minggu">minggu</option>
-            </select>
-            <input type="button" value="besok hari>>" onclick="soal1()">
-            <input type="text" id="besokHari" size="20" placeholder="apa ya..">
-        </form>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-4">
+                <h2>SOAL 1</h2>
+                <h3>Besok Hari apa?</h3>
+                <h5>pseudo code:</h5>
+                <p>
+                    1. masukan list dari hari (senin-minggu) <br>
+                    2. buat loop for i=0, sampai i=hari.length, i++ <br>
+                    2.1 jika hari senin-sabtu, print hari berikutnya <br>
+                    2.2 jika hari minggu, print hari senin <br>
+                </p>
+                <div class="form-group">
+                    <form>
+                        <b>pilih hari:</b>
+                        <select id="hari" class="custom-select">
+                            <option value="senin">senin</option>
+                            <option value="selasa">selasa</option>
+                            <option value="rabu">rabu</option>
+                            <option value="kamis">kamis</option>
+                            <option value="jumat">jumat</option>
+                            <option value="sabtu">sabtu</option>
+                            <option value="minggu">minggu</option>
+                        </select>
+                        <input type="button" value="besok adalah hari " onclick="soal1()" class="btn btn-secondary">
+                        <input type="text" id="besokHari" size="20" placeholder="apa ya.." class="custom-select">
+                    </form>
+                </div>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <br>
         <br>
         <br>
 
 
         <!-- soal kedua -->
-        <h2>SOAL 2</h2>
-        <h3>Apa Nilai Kamu?</h3>
-        <h5>pseudo code:</h5>
-        <p>
-            1.tentukan nilai yang diberikan <br>
-            2.jika bukan angka, tuliskan "bukan angka" <br>
-            3.jika angka diluar 0-100, tuliskan "angka harus 0-100" <br>
-            4.jika angka 0-100, masukan ke if lagi <br>
-            4.1 bagi range angka sesuai yang ditetapkan <br>
-            4.2 print konversi angka sesuai yang ditetapkan <br>
-        </p>
-        <form action="/">
-            <b>masukan nilai:</b>
-            <br>
-            <input type="number" name="nilai" id="nilai">
-            <input type="button" value="konversi" onclick="soal2()">
-            <p>nilai kamu adalah</p>
-            <p id="konversiHuruf">*mainkan musik</p>
-        </form>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-4">
+                <h2>SOAL 2</h2>
+                <h3>Apa Nilai Kamu?</h3>
+                <h5>pseudo code:</h5>
+                <p>
+                    1.tentukan nilai yang diberikan <br>
+                    2.jika bukan angka, tuliskan "bukan angka" <br>
+                    3.jika angka diluar 0-100, tuliskan "angka harus 0-100" <br>
+                    4.jika angka 0-100, masukan ke if lagi <br>
+                    4.1 bagi range angka sesuai yang ditetapkan <br>
+                    4.2 print konversi angka sesuai yang ditetapkan <br>
+                </p>
+                <form action="/" class="form-group">
+                    <b>masukan nilai:</b>
+                    <br>
+                    <input type="number" name="nilai" id="nilai" class="form-control">
+                    <input type="button" value="konversi" onclick="soal2()" class="btn btn-secondary">
+                    <p>nilai kamu adalah</p>
+                    <p id="konversiHuruf">*mainkan musik</p>
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
+        <br>
+        <br>
+        <br>
+
 
 
         <!-- soal ketiga -->
-        <h2>SOAL 3</h2>
-        <h3>Perulangan Genap</h3>
-        <h5>pseudo code:</h5>
-        <p>
-            1. tentukan dan batasi nilai yang diberikan <br>
-            2. buat batasan angka (0-50) agar sistem tidak overload jika angka terlalu besar <br>
-            3. jika angka melewati batas, tuliskan batas angka yang harus dimasukan <br>
-            4. jika angka dalam batas, masukan ke loop for <br>
-            4.1 for index=0, index kurdar angka+1, index++, <br>
-            4.2 print tiap index
-        </p>
-        <form action="/">
-            <b>masukan nilai antar 0-50</b>
-            <br>
-            <input type="number" name="angkaGenap" id="angkaGenap">
-            <input type="button" value="Tunjukan angka genap" onclick="soal3()">
-            <p>berikut ini angka genapnya</p>
-            <p id="listAngkaGenap">angkanya disini...</p>
-        </form>
-
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-4">
+                <h2>SOAL 3</h2>
+                <h3>Perulangan Genap</h3>
+                <h5>pseudo code:</h5>
+                <p>
+                    1. tentukan dan batasi nilai yang diberikan <br>
+                    2. buat batasan angka (0-50) agar sistem tidak overload jika angka terlalu besar <br>
+                    3. jika angka melewati batas, tuliskan batas angka yang harus dimasukan <br>
+                    4. jika angka dalam batas, masukan ke loop for <br>
+                    4.1 for index=0, index kurdar angka+1, index++, <br>
+                    4.2 print tiap index
+                </p>
+                <form action="/" class="form-group">
+                    <b>masukan nilai antar 0-50</b>
+                    <br>
+                    <input type="number" name="angkaGenap" id="angkaGenap" class="form-control">
+                    <input type="button" value="Tunjukan angka genap" onclick="soal3()" class="btn btn-secondary">
+                    <p>berikut ini angka genapnya</p>
+                    <p id="listAngkaGenap">angkanya muncul disini...</p>
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
+        <br>
+        <br>
+        <br>
 
         <!-- soal keempat -->
-        <h2>SOAL 4</h2>
-        <h3>Perualangan Ganjil</h3>
-        <h5>pseudo code:</h5>
-        <p>
-            1. tentukan dan batasi nilai yang diberikan <br>
-            2. buat batasan angka (0-50) agar sistem tidak overload jika angka terlalu besar <br>
-            3. jika angka melewati batas, tuliskan batas angka yang harus dimasukan <br>
-            4. jika angka dalam batas, masukan ke loop for <br>
-            4.1 for index=1, index kurdar angka+1, index++ <br>
-            4.2 print tiap index
-        <form action="/">
-            <b>masukan nilai antara 0-50</b>
-            <br>
-            <input type="number" name="angkaGanjil" id="angkaGanjil">
-            <input type="button" value="Tunjukan angka genap" onclick="soal4()">
-            <p>berikut ini angka ganjilnya</p>
-            <p id="listAngkaGanjil">angkanya disini...</p>
-        </form>
-
-
-
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-4">
+                <h2>SOAL 4</h2>
+                <h3>Perualangan Ganjil</h3>
+                <h5>pseudo code:</h5>
+                <p>
+                    1. tentukan dan batasi nilai yang diberikan <br>
+                    2. buat batasan angka (0-50) agar sistem tidak overload jika angka terlalu besar <br>
+                    3. jika angka melewati batas, tuliskan batas angka yang harus dimasukan <br>
+                    4. jika angka dalam batas, masukan ke loop for <br>
+                    4.1 for index=1, index kurdar angka+1, index++ <br>
+                    4.2 print tiap index
+                </p>
+                <form action="/" class="form-group">
+                    <b>masukan nilai antara 0-50</b>
+                    <br>
+                    <input type="number" name="angkaGanjil" id="angkaGanjil" class="form-control">
+                    <input type="button" value="Tunjukan angka ganjil" onclick="soal4()" class="btn btn-secondary">
+                    <p>berikut ini angka ganjilnya</p>
+                    <p id="listAngkaGanjil">angkanya muncul disini...</p>
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
     </div>
 
 
