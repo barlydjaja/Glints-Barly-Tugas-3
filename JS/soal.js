@@ -53,16 +53,39 @@ function soal2(){
 
 
 // 3. perulangan genap
-let angkaGenap = 20;
+function soal3(){
+    let angkaGenap = document.getElementById("angkaGenap").value;
+    angkaGenap = Number(angkaGenap)
+    listAngkaGenap = []
 
-for (let index = 0; index < angkaGenap+1; index+=2) {
-    console.log (index);
+    if (angkaGenap<0 || angkaGenap>50){
+        document.getElementById("listAngkaGenap").innerHTML = "angka harus antara 0-50"
+    } else {
+        for (let index = 0; index<angkaGenap+1; index+=2) {
+            listAngkaGenap.push(index)
+            console.log (index);
+        }
+        console.log(listAngkaGenap)
+        document.getElementById("listAngkaGenap").innerHTML = listAngkaGenap
+
+    }
 }
 
 
 // 4. perulangan ganjil
-let angkaGanjil = 15;
-
-for (let index = 1; index < angkaGanjil+1; index+=2) {
-    console.log(index)
+function soal4(){
+    let angkaGanjil = document.getElementById("angkaGanjil").value;
+    angkaGanjil = Number(angkaGanjil)
+    listAngkaGanjil = []
+    
+    if (angkaGanjil<0 || angkaGanjil>50){
+        document.getElementById("listAngkaGanjil").innerHTML = "angka harus antara 0-50"
+    } else {
+        for (let index = 1; index<angkaGanjil+1; index+=2) {
+            listAngkaGanjil.push(index)
+            console.log (index);
+        }
+        console.log(listAngkaGanjil)
+        document.getElementById("listAngkaGanjil").innerHTML = listAngkaGanjil
+    }
 }

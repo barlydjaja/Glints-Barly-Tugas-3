@@ -11,8 +11,12 @@
 
 <body>
     <div class="container">
-        <h1 style="text-align: center;">Tugas-3</h1>
+        <h1 style="text-align: center;">Tugas-3 GLINTS</h1>
         <h3 style="text-align: center;">Barly Djaja</h3>
+        <div class="text-center">
+            <a href="./image/tugasnya.png" class="btn btn-dark" target="_blank">Download
+                Instruksi Tugas</a>
+        </div>
         <br>
         <!-- soal pertama -->
         <h2>SOAL 1</h2>
@@ -54,7 +58,7 @@
             4.1 bagi range angka sesuai yang ditetapkan <br>
             4.2 print konversi angka sesuai yang ditetapkan <br>
         </p>
-        <form action="nilai">
+        <form action="/">
             <b>masukan nilai:</b>
             <br>
             <input type="number" name="nilai" id="nilai">
@@ -67,6 +71,47 @@
         <!-- soal ketiga -->
         <h2>SOAL 3</h2>
         <h3>Perulangan Genap</h3>
+        <h5>pseudo code:</h5>
+        <p>
+            1. tentukan dan batasi nilai yang diberikan <br>
+            2. buat batasan angka (0-50) agar sistem tidak overload jika angka terlalu besar <br>
+            3. jika angka melewati batas, tuliskan batas angka yang harus dimasukan <br>
+            4. jika angka dalam batas, masukan ke loop for <br>
+            4.1 for index=0, index kurdar angka+1, index++, <br>
+            4.2 print tiap index
+        </p>
+        <form action="/">
+            <b>masukan nilai antar 0-50</b>
+            <br>
+            <input type="number" name="angkaGenap" id="angkaGenap">
+            <input type="button" value="Tunjukan angka genap" onclick="soal3()">
+            <p>berikut ini angka genapnya</p>
+            <p id="listAngkaGenap">angkanya disini...</p>
+        </form>
+
+
+        <!-- soal keempat -->
+        <h2>SOAL 4</h2>
+        <h3>Perualangan Ganjil</h3>
+        <h5>pseudo code:</h5>
+        <p>
+            1. tentukan dan batasi nilai yang diberikan <br>
+            2. buat batasan angka (0-50) agar sistem tidak overload jika angka terlalu besar <br>
+            3. jika angka melewati batas, tuliskan batas angka yang harus dimasukan <br>
+            4. jika angka dalam batas, masukan ke loop for <br>
+            4.1 for index=1, index kurdar angka+1, index++ <br>
+            4.2 print tiap index
+        <form action="/">
+            <b>masukan nilai antara 0-50</b>
+            <br>
+            <input type="number" name="angkaGanjil" id="angkaGanjil">
+            <input type="button" value="Tunjukan angka genap" onclick="soal4()">
+            <p>berikut ini angka ganjilnya</p>
+            <p id="listAngkaGanjil">angkanya disini...</p>
+        </form>
+
+
+
     </div>
 
 
