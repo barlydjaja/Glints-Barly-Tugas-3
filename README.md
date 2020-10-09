@@ -26,3 +26,5 @@
 
 batas pengumpulan : rabu, 14 oktober 2020 23:59 WIB
 kumpulnya: link repo github via email (fnoviadha@binar.co.id)
+
+Catatan: berikutnya coba perbaiki tampilan HTML dan cek kembali soal yang dilakukan apakah ada yang error
