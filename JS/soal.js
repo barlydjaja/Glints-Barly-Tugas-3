@@ -1,91 +1,111 @@
-// 1. Besok Hari Apa?
-function soal1(){
-    // buat variabel 
-    let hari =["senin", "selasa", "rabu", "kamis", "jumat", "sabtu", "minggu"]
+// 1. Besok hari apa ya?
+function fixSoal1(){
+    // buat list nama hari
+    let hari =  ["senin", "selasa", "rabu", "kamis", "jumat", "sabtu", "minggu"]
+    // tarik data html untuk hari yang dipilih
     let sekarang = document.getElementById("hari").value;
-    // masuk ke loop 
-    for (let i = 0; i < hari.length; i++) {
-        // jika senin-sabtu
-        if (i<hari.length-1 && sekarang == hari[i]) {
-            document.getElementById("besokHari").value = hari[i+1]
-        // jika minggu
-        } else if(sekarang == hari[i]){
-            document.getElementById("besokHari").value = hari [0]
+    // masukin ke loop jika sesuai
+    if (hari.includes(sekarang)){
+        for (let index = 0; index < hari.length; index++) {
+            // jika hari senin-sabtu (hari[0-5])
+            if (index <hari.length-1 && sekarang == hari[index]){
+                document.getElementById("besokHari").value = hari[index+1]
+            // jika hari minggu, kembalikan ke senin
+            } else if (sekarang == hari[index]){
+                document.getElementById.length("besokHari").value = hari[0]
+            } 
         }
+    // display jika tidak sesuai nama hari
+    } else{
+        document.getElementById("besokHari").value = (`${sekarang} bukan hari yang valid`)
     }
 }
 
 
-/* 2. kasih nilai 
-90-100 = A
-75-89 = B
-60-74 = C
-50-59 = D
-<50 = F*/
-function soal2(){
-    let nilai = document.getElementById("nilai").value;
-    
+// 2. kasih nilai 
+function fixSoal2(){
+    // ambil data dari html
+    let nilai = Number(document.getElementById("nilai").value)
+    // jika bukan angka
     if (!nilai){
         document.getElementById("konversiHuruf").innerHTML = "bukan angka"
-        console.log("bukan angka")
+    //jika angka 0-100
     } else if (nilai>=0 && nilai<=100){
         if (nilai>=90 && nilai <=100) {
-            document.getElementById("konversiHuruf").innerHTML = `nilai${nilai} dapat A`
-            console.log("Nilai A")
+            // 90-100 = A
+            document.getElementById("konversiHuruf").innerHTML = `Nilai ${nilai} dapat A`
         }else if (nilai >= 75 && nilai <= 89) {
-            document.getElementById("konversiHuruf").innerHTML = `nilai ${nilai} dapat B`
-            console.log("Nilai B")
+            // 75-89 = B
+            document.getElementById("konversiHuruf").innerHTML = `Nilai ${nilai} dapat B`
         }else if (nilai >= 60 && nilai <= 74) {
-            document.getElementById("konversiHuruf").innerHTML = `nilai ${nilai} dapat C`
-            console.log("Nilai C")
+            // 60-74 = C
+            document.getElementById("konversiHuruf").innerHTML = `Nilai ${nilai} dapat C`
         }else if (nilai >= 50 && nilai <= 59) {
-            document.getElementById("konversiHuruf").innerHTML = `nilai ${nilai} dapat D`
-            console.log("Nilai D")
+            // 50-60 = D
+            document.getElementById("konversiHuruf").innerHTML = `Nilai ${nilai} dapat D`
         }else if (nilai < 50){
-            document.getElementById("konversiHuruf").innerHTML = `nilai ${nilai} GAK LULUS`
-            console.log(" Gak lulus")
+            // <50 = gak lulus
+            document.getElementById("konversiHuruf").innerHTML = `Nilai ${nilai} GAK LULUS`
         }
-    } else if(nilai<0 || nilai>0){
+    // jika angka diluar 0-100
+    } else {
         document.getElementById("konversiHuruf").innerHTML = "nilai hanya dari 0-100"
-        console.log("nilai hanya dari 0-100")
     }
 }
 
 
 // 3. perulangan genap
-function soal3(){
-    let angkaGenap = document.getElementById("angkaGenap").value;
-    angkaGenap = Number(angkaGenap)
+function fixSoal3(){
+    // ambil data dari HTML
+    let inputHtml = (document.getElementById("angkaGenap").value)
+    // konversi ke number type
+    let angkaGenap = Number(inputHtml)
+    // buat list untuk masukin angka
     listAngkaGenap = []
-
-    if (angkaGenap<0 || angkaGenap>50){
-        document.getElementById("listAngkaGenap").innerHTML = "angka harus antara 0-50"
-    } else {
-        for (let index = 0; index<angkaGenap+1; index+=2) {
-            listAngkaGenap.push(index)
-            console.log (index);
+    // jika bukan number type
+    if(!angkaGenap){
+        document.getElementById("listAngkaGenap").innerHTML = `${inputHtml} bukan angka`
+    // jika number type
+    } else{
+        // jika angka diluar 0-50
+        if (angkaGenap<0 || angkaGenap>50){
+            document.getElementById("listAngkaGenap").innerHTML = "angka harus antara 0-50"
+        // jika angka antara 0-50
+        } else {
+            for (let index = 0; index<angkaGenap+1; index+=2) {
+                // masukin angka ke list yang dibuat
+                listAngkaGenap.push(index)
+            }
+            // print list ke html
+            document.getElementById("listAngkaGenap").innerHTML = listAngkaGenap
         }
-        console.log(listAngkaGenap)
-        document.getElementById("listAngkaGenap").innerHTML = listAngkaGenap
-
     }
 }
 
 
 // 4. perulangan ganjil
-function soal4(){
-    let angkaGanjil = document.getElementById("angkaGanjil").value;
-    angkaGanjil = Number(angkaGanjil)
+function fixSoal4(){
+    // ambil data dari HTML
+    let inputHtml = document.getElementById("angkaGanjil").value;
+    // konversi ke number type
+    let angkaGanjil = Number(inputHtml)
+    // buat list untuk masukin angka
     listAngkaGanjil = []
-    
-    if (angkaGanjil<0 || angkaGanjil>50){
-        document.getElementById("listAngkaGanjil").innerHTML = "angka harus antara 0-50"
-    } else {
-        for (let index = 1; index<angkaGanjil+1; index+=2) {
-            listAngkaGanjil.push(index)
-            console.log (index);
+    // jika bukan number type
+    if(!angkaGanjil){
+        document.getElementById("listAngkaGanjil").innerHTML = `${inputHtml} bukan angka`
+    // jika number type
+    }else{
+        // jika angka diluar 0-50
+        if (angkaGanjil<0 || angkaGanjil>50){
+            document.getElementById("listAngkaGanjil").innerHTML = "angka harus antara 0-50"
+        // jika angka antara 0-50
+        } else {
+            for (let index = 1; index<angkaGanjil+1; index+=2) {
+                listAngkaGanjil.push(index)
+            }
+            // print list ke HTML
+            document.getElementById("listAngkaGanjil").innerHTML = listAngkaGanjil
         }
-        console.log(listAngkaGanjil)
-        document.getElementById("listAngkaGanjil").innerHTML = listAngkaGanjil
     }
 }
