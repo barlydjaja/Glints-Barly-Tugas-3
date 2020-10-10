@@ -33,22 +33,19 @@
                     2.1 jika hari senin-sabtu, print hari berikutnya <br>
                     2.2 jika hari minggu, print hari senin <br>
                 </p>
-                <div class="form-group">
-                    <form>
-                        <b>pilih hari:</b>
-                        <select id="hari" class="custom-select">
-                            <option value="senin">senin</option>
-                            <option value="selasa">selasa</option>
-                            <option value="rabu">rabu</option>
-                            <option value="kamis">kamis</option>
-                            <option value="jumat">jumat</option>
-                            <option value="sabtu">sabtu</option>
-                            <option value="minggu">minggu</option>
-                        </select>
-                        <input type="button" value="besok adalah hari " onclick="soal1()" class="btn btn-secondary">
-                        <input type="text" id="besokHari" size="20" placeholder="apa ya.." class="custom-select">
-                    </form>
-                </div>
+                <b>pilih hari:</b>
+                <select id="hari" class="custom-select">
+                    <option value="senin">senin</option>
+                    <option value="selasa">selasa</option>
+                    <option value="rabu">rabu</option>
+                    <option value="kamis">kamis</option>
+                    <option value="jumat">jumat</option>
+                    <option value="sabtu">sabtu</option>
+                    <option value="minggu">minggu</option>
+                    <option value="januari">januari</option>
+                </select>
+                <input type="button" value="besok adalah hari " onclick="fixSoal1()" class="btn btn-secondary">
+                <input type="text" id="besokHari" size="20" placeholder="apa ya.." class="custom-select">
             </div>
             <div class="col">
             </div>
@@ -73,14 +70,12 @@
                     4.1 bagi range angka sesuai yang ditetapkan <br>
                     4.2 print konversi angka sesuai yang ditetapkan <br>
                 </p>
-                <form action="/" class="form-group">
-                    <b>masukan nilai:</b>
-                    <br>
-                    <input type="number" name="nilai" id="nilai" class="form-control">
-                    <input type="button" value="konversi" onclick="soal2()" class="btn btn-secondary">
-                    <p>nilai kamu adalah</p>
-                    <p id="konversiHuruf">*mainkan musik</p>
-                </form>
+                <b>masukan nilai:</b>
+                <br>
+                <input type="text" name="nilai" id="nilai" class="form-control">
+                <input type="button" value="konversi" onclick="fixSoal2()" class="btn btn-secondary">
+                <p>nilai kamu adalah</p>
+                <p id="konversiHuruf">*mainkan musik</p>
             </div>
             <div class="col"></div>
         </div>
@@ -105,20 +100,19 @@
                     4.1 for index=0, index kurdar angka+1, index+=2, <br>
                     4.2 print tiap index
                 </p>
-                <form action="/" class="form-group">
-                    <b>masukan nilai antar 0-50</b>
-                    <br>
-                    <input type="number" name="angkaGenap" id="angkaGenap" class="form-control">
-                    <input type="button" value="Tunjukan angka genap" onclick="soal3()" class="btn btn-secondary">
-                    <p>berikut ini angka genapnya</p>
-                    <p id="listAngkaGenap">angkanya muncul disini...</p>
-                </form>
+                <b>masukan nilai antar 0-50</b>
+                <br>
+                <input type="text" name="angkaGenap" id="angkaGenap" class="form-control">
+                <input type="button" value="Tunjukan angka genap" onclick="fixSoal3()" class="btn btn-secondary">
+                <p>berikut ini angka genapnya</p>
+                <p id="listAngkaGenap">angkanya muncul disini...</p>
             </div>
             <div class="col"></div>
         </div>
         <br>
         <br>
         <br>
+
 
         <!-- soal keempat -->
         <div class="row">
@@ -135,23 +129,16 @@
                     4.1 for index=1, index kurdar angka+1, index+=2 <br>
                     4.2 print tiap index
                 </p>
-                <form action="/" class="form-group">
-                    <b>masukan nilai antara 0-50</b>
-                    <br>
-                    <input type="number" name="angkaGanjil" id="angkaGanjil" class="form-control">
-                    <input type="button" value="Tunjukan angka ganjil" onclick="soal4()" class="btn btn-secondary">
-                    <p>berikut ini angka ganjilnya</p>
-                    <p id="listAngkaGanjil">angkanya muncul disini...</p>
-                </form>
+                <b>masukan nilai antara 0-50</b>
+                <br>
+                <input type="text" name="angkaGanjil" id="angkaGanjil" class="form-control">
+                <input type="button" value="Tunjukan angka ganjil" onclick="fixSoal4()" class="btn btn-secondary">
+                <p>berikut ini angka ganjilnya</p>
+                <p id="listAngkaGanjil">angkanya muncul disini...</p>
             </div>
             <div class="col"></div>
         </div>
     </div>
-
-
-
-
-
 
 
     <script src="./JS/soal.js">
