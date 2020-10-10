@@ -12,7 +12,7 @@ function fixSoal1(){
                 document.getElementById("besokHari").value = hari[index+1]
             // jika hari minggu, kembalikan ke senin
             } else if (sekarang == hari[index]){
-                document.getElementById.length("besokHari").value = hari[0]
+                document.getElementById("besokHari").value = hari[0]
             } 
         }
     // display jika tidak sesuai nama hari
@@ -25,10 +25,11 @@ function fixSoal1(){
 // 2. kasih nilai 
 function fixSoal2(){
     // ambil data dari html
-    let nilai = Number(document.getElementById("nilai").value)
+    let inputHtml = (document.getElementById("nilai").value)
+    let nilai = Number(inputHtml)
     // jika bukan angka
-    if (!nilai){
-        document.getElementById("konversiHuruf").innerHTML = "bukan angka"
+    if (isNaN(nilai)){
+        document.getElementById("konversiHuruf").innerHTML = `${inputHtml} bukan angka`
     //jika angka 0-100
     } else if (nilai>=0 && nilai<=100){
         if (nilai>=90 && nilai <=100) {
@@ -57,13 +58,13 @@ function fixSoal2(){
 // 3. perulangan genap
 function fixSoal3(){
     // ambil data dari HTML
-    let inputHtml = (document.getElementById("angkaGenap").value)
+    let inputHtml = document.getElementById("angkaGenap").value
     // konversi ke number type
     let angkaGenap = Number(inputHtml)
     // buat list untuk masukin angka
     listAngkaGenap = []
     // jika bukan number type
-    if(!angkaGenap){
+    if(isNaN(angkaGenap)){
         document.getElementById("listAngkaGenap").innerHTML = `${inputHtml} bukan angka`
     // jika number type
     } else{
@@ -86,21 +87,25 @@ function fixSoal3(){
 // 4. perulangan ganjil
 function fixSoal4(){
     // ambil data dari HTML
-    let inputHtml = document.getElementById("angkaGanjil").value;
+    let inputHtml = document.getElementById("angkaGanjil").value
     // konversi ke number type
     let angkaGanjil = Number(inputHtml)
+    console.log(angkaGanjil)
     // buat list untuk masukin angka
     listAngkaGanjil = []
     // jika bukan number type
-    if(!angkaGanjil){
+    if(isNaN(angkaGanjil)){
         document.getElementById("listAngkaGanjil").innerHTML = `${inputHtml} bukan angka`
     // jika number type
     }else{
         // jika angka diluar 0-50
         if (angkaGanjil<0 || angkaGanjil>50){
             document.getElementById("listAngkaGanjil").innerHTML = "angka harus antara 0-50"
-        // jika angka antara 0-50
-        } else {
+        // jika 0
+        }else if (angkaGanjil === 0){
+            document.getElementById("listAngkaGanjil").innerHTML = "mulai dari 1"
+        // jika angka antara 1-50
+        }else {
             for (let index = 1; index<angkaGanjil+1; index+=2) {
                 listAngkaGanjil.push(index)
             }
